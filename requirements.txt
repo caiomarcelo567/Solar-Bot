@@ -1,4 +1,3 @@
-discord.py
 discord.py[voice]
 https://github.com/ytdl-org/youtube-dl/archive/refs/heads/master.zip
 ffmpeg
