@@ -6,7 +6,7 @@ import asyncio
 import time
 
 # Configurando o bot
-token = "TOKEN_BOT"
+token = "NjExNTgwMTkyMDExNTgzNDg5.GuS5qm.22zb0Bili5UiPGC2mnGRm4YBK3yZqozjC6m9qU"
 prefix = "!!"
 bot = commands.Bot(command_prefix=prefix, intents=discord.Intents.all())
 
@@ -36,8 +36,16 @@ async def play(ctx, url: str):
     voice_client = await voice_channel.connect()
 
     # Faz o download do áudio do YouTube
-    audio_options = {"format": "bestaudio/best", "postprocessor": [
-        {"key": "FFmpegExtractAudio", "preferredcodec": "mp3", "preferredquality": "192"}]}
+    audio_options = {
+        "format": "bestaudio/best",
+        "postprocessor": [{
+            "key": "FFmpegExtractAudio",
+            "preferredcodec": "mp3",
+            "preferredquality": "192"
+        }],
+        "nocheckcertificate": True
+    }
+
     with youtube_dl.YoutubeDL(audio_options) as audio:
         info = audio.extract_info(url, download=False)
         ur12 = info["formats"][0]["url"]
