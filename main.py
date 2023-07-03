@@ -6,7 +6,7 @@ import asyncio
 import time
 
 # Configurando o bot
-token = "NjExNTgwMTkyMDExNTgzNDg5.GuS5qm.22zb0Bili5UiPGC2mnGRm4YBK3yZqozjC6m9qU"
+token = "TOKEN"
 prefix = "!!"
 bot = commands.Bot(command_prefix=prefix, intents=discord.Intents.all())
 
